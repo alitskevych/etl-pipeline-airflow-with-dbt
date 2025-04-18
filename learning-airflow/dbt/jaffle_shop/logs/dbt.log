@@ -1,0 +1,1601 @@
+[0m16:34:44.424986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f857a0461b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f857a211eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f857a91af00>]}
+
+
+============================== 16:34:44.429173 | 3ef703b1-ab3a-4784-87a6-fcb013cd411c ==============================
+[0m16:34:44.429173 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:34:44.430733 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/local/airflow/dbt/profiles', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/local/airflow/dbt/jaffle_shop/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --project-dir /usr/local/airflow/dbt/jaffle_shop --profiles-dir /usr/local/airflow/dbt/profiles --select path:models/raw', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:34:44.775815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3ef703b1-ab3a-4784-87a6-fcb013cd411c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f857661fdd0>]}
+[0m16:34:44.905411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3ef703b1-ab3a-4784-87a6-fcb013cd411c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f857a1c6fc0>]}
+[0m16:34:44.906675 [info ] [MainThread]: Registered adapter: duckdb=1.7.2
+[0m16:34:44.922835 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m16:34:44.933587 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:34:44.934457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3ef703b1-ab3a-4784-87a6-fcb013cd411c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f85766c5ac0>]}
+[0m16:34:46.365605 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customers.sql
+[0m16:34:46.388318 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customer_ltv.sql
+[0m16:34:46.393132 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_daily_sales.sql
+[0m16:34:46.398920 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_employee_sales_summary.sql
+[0m16:34:46.404866 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_products.sql
+[0m16:34:46.410250 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_by_country.sql
+[0m16:34:46.417698 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_detailed.sql
+[0m16:34:46.423583 [debug] [MainThread]: 1603: static parser failed on mart/mart_sales_summary.sql
+[0m16:34:46.433576 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mart/mart_sales_summary.sql
+[0m16:34:46.437046 [debug] [MainThread]: 1699: static parser successfully parsed raw/minio/raw_sales.sql
+[0m16:34:46.442095 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_categories.sql
+[0m16:34:46.446984 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_cities.sql
+[0m16:34:46.453947 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_countries.sql
+[0m16:34:46.458898 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_customers.sql
+[0m16:34:46.463440 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_employees.sql
+[0m16:34:46.469042 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_products.sql
+[0m16:34:46.473275 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_categories.sql
+[0m16:34:46.477281 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_cities.sql
+[0m16:34:46.482894 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_countries.sql
+[0m16:34:46.487729 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customers.sql
+[0m16:34:46.491877 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employees.sql
+[0m16:34:46.496034 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m16:34:46.501768 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales.sql
+[0m16:34:46.649851 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_product_performance' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:34:46.653184 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_customer_lifetime_value' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:34:46.655384 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_by_region' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:34:46.657582 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_monthly_sales' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:34:46.659319 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_top_customers' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:34:46.661518 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_trends' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:34:47.050766 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.jaffle_shop.mart_sales_summary' (models/mart/mart_sales_summary.sql) depends on a node named 'source_data' which was not found
+[0m16:34:47.052395 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.7153819, "process_user_time": 4.976316, "process_kernel_time": 0.159561, "process_mem_max_rss": "233612", "process_in_blocks": "1368", "command_success": false, "process_out_blocks": "0"}
+[0m16:34:47.053686 [debug] [MainThread]: Command `dbt run` failed at 16:34:47.053467 after 2.72 seconds
+[0m16:34:47.054480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f857a0461b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8579eadf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8575bbf380>]}
+[0m16:34:47.055195 [debug] [MainThread]: Flushing usage events
+[0m16:41:06.530910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9680359250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f968035bc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96803592e0>]}
+
+
+============================== 16:41:06.535551 | 9385dd1a-f906-4310-8091-ad1a97f86b33 ==============================
+[0m16:41:06.535551 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:41:06.536566 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/local/airflow/dbt/profiles', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/usr/local/airflow/dbt/jaffle_shop/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --project-dir /usr/local/airflow/dbt/jaffle_shop --profiles-dir /usr/local/airflow/dbt/profiles --select path:models/raw', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:41:06.901722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f96803b63f0>]}
+[0m16:41:07.010836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c512a20>]}
+[0m16:41:07.012794 [info ] [MainThread]: Registered adapter: duckdb=1.7.2
+[0m16:41:07.025984 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m16:41:07.032661 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:41:07.033421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c560830>]}
+[0m16:41:08.297061 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customers.sql
+[0m16:41:08.317173 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customer_ltv.sql
+[0m16:41:08.321432 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_daily_sales.sql
+[0m16:41:08.325937 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_employee_sales_summary.sql
+[0m16:41:08.330420 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_products.sql
+[0m16:41:08.335049 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_by_country.sql
+[0m16:41:08.342541 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_detailed.sql
+[0m16:41:08.346704 [debug] [MainThread]: 1603: static parser failed on mart/mart_sales_summary.sql
+[0m16:41:08.354235 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mart/mart_sales_summary.sql
+[0m16:41:08.356491 [debug] [MainThread]: 1699: static parser successfully parsed raw/minio/raw_sales.sql
+[0m16:41:08.360411 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_categories.sql
+[0m16:41:08.364420 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_cities.sql
+[0m16:41:08.368216 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_countries.sql
+[0m16:41:08.372583 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_customers.sql
+[0m16:41:08.376624 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_employees.sql
+[0m16:41:08.380571 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_products.sql
+[0m16:41:08.384651 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_categories.sql
+[0m16:41:08.388919 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_cities.sql
+[0m16:41:08.393368 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_countries.sql
+[0m16:41:08.397452 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customers.sql
+[0m16:41:08.401640 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employees.sql
+[0m16:41:08.405980 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m16:41:08.410152 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales.sql
+[0m16:41:08.538915 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_product_performance' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:41:08.541688 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_customer_lifetime_value' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:41:08.544282 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_by_region' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:41:08.546872 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_monthly_sales' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:41:08.548838 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_top_customers' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:41:08.551227 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_trends' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:41:08.884872 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_product_id.3cbcd22bfe' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:41:08.885941 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_product_performance_product_id.eb590e33e2' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:41:08.886899 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_total_sales.8a14874d87' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:41:08.887812 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_total_revenue.31554647f8' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:41:08.888744 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_customer_id.fac63f245c' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:41:08.889625 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_customer_lifetime_value_customer_id.a216a75a35' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:41:08.890540 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_lifetime_revenue.f5f1497056' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:41:08.891525 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_average_order_value.56963bbcea' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:41:08.892508 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_region_id.d66dec7698' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:41:08.893482 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_sales_by_region_region_id.1f1612fa5d' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:41:08.894609 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_total_revenue.b0ca9c073d' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:41:08.895682 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_total_orders.3a38d17379' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:41:08.896639 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_month.88bdeb9805' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m16:41:08.897567 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_total_revenue.2e79ed72c4' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m16:41:08.898541 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_total_orders.ff48095526' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m16:41:08.899522 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_customer_id.f3ec0e0149' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:41:08.900485 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_top_customers_customer_id.573932aaf3' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:41:08.901454 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_total_revenue.90d82ec46b' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:41:08.902376 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_total_orders.658cc7eaa0' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:41:08.903316 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_date.5765925008' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m16:41:08.904283 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_total_revenue.b63af3cbff' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m16:41:08.905205 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_total_orders.9e64cbd99b' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m16:41:08.958167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c217200>]}
+[0m16:41:09.006501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c156b70>]}
+[0m16:41:09.007291 [info ] [MainThread]: Found 22 models, 23 tests, 7 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m16:41:09.007980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c220bf0>]}
+[0m16:41:09.016241 [info ] [MainThread]: 
+[0m16:41:09.017458 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:41:09.019333 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_my_duckdb'
+[0m16:41:09.035341 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb"
+[0m16:41:09.036619 [debug] [ThreadPool]: On list_my_duckdb: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_my_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"my_duckdb"'
+    
+  
+  
+[0m16:41:09.037719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:41:12.298649 [debug] [ThreadPool]: SQL status: OK in 3.0 seconds
+[0m16:41:12.300754 [debug] [ThreadPool]: On list_my_duckdb: Close
+[0m16:41:12.305225 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_my_duckdb, now create_my_duckdb_main)
+[0m16:41:12.306379 [debug] [ThreadPool]: Creating schema "database: "my_duckdb"
+schema: "main"
+"
+[0m16:41:12.314627 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:41:12.315898 [debug] [ThreadPool]: On create_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_my_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='my_duckdb'
+        and type='sqlite'
+    
+  
+[0m16:41:12.316597 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:41:12.420196 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:41:12.422727 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:41:12.423490 [debug] [ThreadPool]: On create_my_duckdb_main: BEGIN
+[0m16:41:12.424656 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:41:12.425279 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:41:12.425902 [debug] [ThreadPool]: On create_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_my_duckdb_main"} */
+
+    
+    
+        create schema if not exists "my_duckdb"."main"
+    
+[0m16:41:12.426904 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:41:12.428955 [debug] [ThreadPool]: On create_my_duckdb_main: COMMIT
+[0m16:41:12.429945 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:41:12.431044 [debug] [ThreadPool]: On create_my_duckdb_main: COMMIT
+[0m16:41:12.432316 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:41:12.433014 [debug] [ThreadPool]: On create_my_duckdb_main: Close
+[0m16:41:12.439149 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_my_duckdb_main, now list_my_duckdb_main)
+[0m16:41:12.447712 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb_main"
+[0m16:41:12.448464 [debug] [ThreadPool]: On list_my_duckdb_main: BEGIN
+[0m16:41:12.449029 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:41:12.566149 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:41:12.567033 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb_main"
+[0m16:41:12.567777 [debug] [ThreadPool]: On list_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_my_duckdb_main"} */
+select
+      'my_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'my_duckdb'
+  
+[0m16:41:12.586479 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:41:12.588336 [debug] [ThreadPool]: On list_my_duckdb_main: ROLLBACK
+[0m16:41:12.589939 [debug] [ThreadPool]: Failed to rollback 'list_my_duckdb_main'
+[0m16:41:12.590669 [debug] [ThreadPool]: On list_my_duckdb_main: Close
+[0m16:41:12.594886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967b0a1910>]}
+[0m16:41:12.595877 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:41:12.596534 [debug] [MainThread]: On master: BEGIN
+[0m16:41:12.597146 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:41:12.706210 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:41:12.707016 [debug] [MainThread]: On master: COMMIT
+[0m16:41:12.707727 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:41:12.708335 [debug] [MainThread]: On master: COMMIT
+[0m16:41:12.709283 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:41:12.709890 [debug] [MainThread]: On master: Close
+[0m16:41:12.713768 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:41:12.714528 [info ] [MainThread]: 
+[0m16:41:12.717461 [debug] [Thread-1 (]: Began running node model.jaffle_shop.raw_categories
+[0m16:41:12.718122 [debug] [Thread-2 (]: Began running node model.jaffle_shop.raw_cities
+[0m16:41:12.718700 [debug] [Thread-3 (]: Began running node model.jaffle_shop.raw_countries
+[0m16:41:12.719821 [debug] [Thread-4 (]: Began running node model.jaffle_shop.raw_customers
+[0m16:41:12.719344 [info ] [Thread-1 (]: 1 of 7 START sql table model main.raw_categories ............................... [RUN]
+[0m16:41:12.720608 [info ] [Thread-2 (]: 2 of 7 START sql table model main.raw_cities ................................... [RUN]
+[0m16:41:12.721322 [info ] [Thread-3 (]: 3 of 7 START sql table model main.raw_countries ................................ [RUN]
+[0m16:41:12.722072 [info ] [Thread-4 (]: 4 of 7 START sql table model main.raw_customers ................................ [RUN]
+[0m16:41:12.723137 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_categories'
+[0m16:41:12.724482 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_cities'
+[0m16:41:12.725535 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_countries'
+[0m16:41:12.726594 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_customers'
+[0m16:41:12.727331 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.raw_categories
+[0m16:41:12.728115 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.raw_cities
+[0m16:41:12.728812 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.raw_countries
+[0m16:41:12.729410 [debug] [Thread-4 (]: Began compiling node model.jaffle_shop.raw_customers
+[0m16:41:12.738132 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.raw_categories"
+[0m16:41:12.741208 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.raw_cities"
+[0m16:41:12.744885 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.raw_countries"
+[0m16:41:12.748392 [debug] [Thread-4 (]: Writing injected SQL for node "model.jaffle_shop.raw_customers"
+[0m16:41:12.765242 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.raw_categories (compile): 16:41:12.729883 => 16:41:12.764821
+[0m16:41:12.766123 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.raw_categories
+[0m16:41:12.788290 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_countries (compile): 16:41:12.741765 => 16:41:12.787902
+[0m16:41:12.794453 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.raw_countries
+[0m16:41:12.817403 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_customers (compile): 16:41:12.745495 => 16:41:12.816982
+[0m16:41:12.818231 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_cities (compile): 16:41:12.738523 => 16:41:12.817854
+[0m16:41:12.836680 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.raw_countries"
+[0m16:41:12.837393 [debug] [Thread-4 (]: Began executing node model.jaffle_shop.raw_customers
+[0m16:41:12.844702 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.raw_categories"
+[0m16:41:12.846218 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.raw_cities
+[0m16:41:12.853098 [debug] [Thread-4 (]: Writing runtime sql for node "model.jaffle_shop.raw_customers"
+[0m16:41:12.859114 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.raw_cities"
+[0m16:41:12.872295 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_countries"
+[0m16:41:12.873142 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: BEGIN
+[0m16:41:12.874021 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:41:12.875532 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_customers"
+[0m16:41:12.876342 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.raw_categories"
+[0m16:41:12.876969 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_cities"
+[0m16:41:12.877586 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: BEGIN
+[0m16:41:12.878952 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: BEGIN
+[0m16:41:12.881114 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: BEGIN
+[0m16:41:12.882212 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:41:12.883016 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:41:12.883881 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:41:12.984340 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m16:41:12.985541 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_countries"
+[0m16:41:12.986480 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_countries"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_countries__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."countries"
+    );
+  
+  
+[0m16:41:12.987876 [debug] [Thread-4 (]: SQL status: OK in 0.0 seconds
+[0m16:41:12.988788 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_customers"
+[0m16:41:12.989646 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_customers"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_customers__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."customers"
+    );
+  
+  
+[0m16:41:12.991660 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:41:12.992774 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.raw_categories"
+[0m16:41:12.993723 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_categories"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_categories__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."categories"
+    );
+  
+  
+[0m16:41:12.995939 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m16:41:12.997164 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_cities"
+[0m16:41:12.998356 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_cities"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_cities__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."cities"
+    );
+  
+  
+[0m16:41:13.007058 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_cities (execute): 16:41:12.854015 => 16:41:13.006499
+[0m16:41:13.008314 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_countries (execute): 16:41:12.800372 => 16:41:13.007918
+[0m16:41:13.009218 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_customers (execute): 16:41:12.847538 => 16:41:13.008885
+[0m16:41:13.010195 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.raw_categories (execute): 16:41:12.766872 => 16:41:13.009837
+[0m16:41:13.010796 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: ROLLBACK
+[0m16:41:13.011764 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: ROLLBACK
+[0m16:41:13.012707 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: ROLLBACK
+[0m16:41:13.013664 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: ROLLBACK
+[0m16:41:13.032156 [debug] [Thread-2 (]: Failed to rollback 'model.jaffle_shop.raw_cities'
+[0m16:41:13.034330 [debug] [Thread-4 (]: Failed to rollback 'model.jaffle_shop.raw_customers'
+[0m16:41:13.035205 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: Close
+[0m16:41:13.036652 [debug] [Thread-3 (]: Failed to rollback 'model.jaffle_shop.raw_countries'
+[0m16:41:13.038138 [debug] [Thread-1 (]: Failed to rollback 'model.jaffle_shop.raw_categories'
+[0m16:41:13.039121 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: Close
+[0m16:41:13.041731 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: Close
+[0m16:41:13.043329 [debug] [Thread-2 (]: Runtime Error in model raw_cities (models/raw/mysql/raw_cities.sql)
+  Catalog Error: Table with name cities does not exist!
+  Did you mean "duckdb_views"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."cities"
+                               ^
+[0m16:41:13.044286 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: Close
+[0m16:41:13.049696 [debug] [Thread-4 (]: Runtime Error in model raw_customers (models/raw/mysql/raw_customers.sql)
+  Catalog Error: Table with name customers does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."customers"
+                               ^
+[0m16:41:13.051408 [debug] [Thread-3 (]: Runtime Error in model raw_countries (models/raw/mysql/raw_countries.sql)
+  Catalog Error: Table with name countries does not exist!
+  Did you mean "duckdb_constraints"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."countries"
+                               ^
+[0m16:41:13.052341 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967aea75c0>]}
+[0m16:41:13.053589 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c27fef0>]}
+[0m16:41:13.054783 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967ae93d70>]}
+[0m16:41:13.056213 [error] [Thread-2 (]: 2 of 7 ERROR creating sql table model main.raw_cities .......................... [[31mERROR[0m in 0.33s]
+[0m16:41:13.058690 [error] [Thread-4 (]: 4 of 7 ERROR creating sql table model main.raw_customers ....................... [[31mERROR[0m in 0.33s]
+[0m16:41:13.060400 [debug] [Thread-1 (]: Runtime Error in model raw_categories (models/raw/mysql/raw_categories.sql)
+  Catalog Error: Table with name categories does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."categories"
+                               ^
+[0m16:41:13.061393 [error] [Thread-3 (]: 3 of 7 ERROR creating sql table model main.raw_countries ....................... [[31mERROR[0m in 0.33s]
+[0m16:41:13.062743 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.raw_cities
+[0m16:41:13.063777 [debug] [Thread-4 (]: Finished running node model.jaffle_shop.raw_customers
+[0m16:41:13.064663 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967ae93b00>]}
+[0m16:41:13.065703 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.raw_countries
+[0m16:41:13.066581 [debug] [Thread-2 (]: Began running node model.jaffle_shop.raw_employees
+[0m16:41:13.067983 [debug] [Thread-4 (]: Began running node model.jaffle_shop.raw_products
+[0m16:41:13.068972 [error] [Thread-1 (]: 1 of 7 ERROR creating sql table model main.raw_categories ...................... [[31mERROR[0m in 0.34s]
+[0m16:41:13.069866 [debug] [Thread-3 (]: Began running node model.jaffle_shop.raw_sales
+[0m16:41:13.070783 [info ] [Thread-2 (]: 5 of 7 START sql table model main.raw_employees ................................ [RUN]
+[0m16:41:13.071678 [info ] [Thread-4 (]: 6 of 7 START sql table model main.raw_products ................................. [RUN]
+[0m16:41:13.072774 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.raw_categories
+[0m16:41:13.073703 [info ] [Thread-3 (]: 7 of 7 START sql table model main.raw_sales .................................... [RUN]
+[0m16:41:13.074770 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_cities, now model.jaffle_shop.raw_employees)
+[0m16:41:13.075999 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_customers, now model.jaffle_shop.raw_products)
+[0m16:41:13.077745 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_countries, now model.jaffle_shop.raw_sales)
+[0m16:41:13.078833 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.raw_employees
+[0m16:41:13.079912 [debug] [Thread-4 (]: Began compiling node model.jaffle_shop.raw_products
+[0m16:41:13.080967 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.raw_sales
+[0m16:41:13.086178 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.raw_employees"
+[0m16:41:13.091740 [debug] [Thread-4 (]: Writing injected SQL for node "model.jaffle_shop.raw_products"
+[0m16:41:13.097409 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.raw_sales"
+[0m16:41:13.106933 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_employees (compile): 16:41:13.081793 => 16:41:13.106422
+[0m16:41:13.107863 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.raw_employees
+[0m16:41:13.116150 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.raw_employees"
+[0m16:41:13.117761 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_sales (compile): 16:41:13.092849 => 16:41:13.116944
+[0m16:41:13.119210 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.raw_sales
+[0m16:41:13.125653 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_products (compile): 16:41:13.087016 => 16:41:13.125214
+[0m16:41:13.126952 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.raw_sales"
+[0m16:41:13.127787 [debug] [Thread-4 (]: Began executing node model.jaffle_shop.raw_products
+[0m16:41:13.138575 [debug] [Thread-4 (]: Writing runtime sql for node "model.jaffle_shop.raw_products"
+[0m16:41:13.140548 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_employees"
+[0m16:41:13.141527 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: BEGIN
+[0m16:41:13.142585 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:41:13.144034 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_products"
+[0m16:41:13.145790 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: BEGIN
+[0m16:41:13.146782 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_sales"
+[0m16:41:13.147632 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:41:13.149026 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: BEGIN
+[0m16:41:13.150893 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:41:13.254759 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m16:41:13.255827 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_employees"
+[0m16:41:13.256803 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_employees"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_employees__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."employees"
+    );
+  
+  
+[0m16:41:13.258660 [debug] [Thread-4 (]: SQL status: OK in 0.0 seconds
+[0m16:41:13.259574 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_products"
+[0m16:41:13.260611 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_products"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_products__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."products"
+    );
+  
+  
+[0m16:41:13.263739 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m16:41:13.264698 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_sales"
+[0m16:41:13.265843 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_sales"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_sales__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."sales"
+    );
+  
+  
+[0m16:41:13.275183 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_sales (execute): 16:41:13.119972 => 16:41:13.274752
+[0m16:41:13.276098 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_products (execute): 16:41:13.129424 => 16:41:13.275764
+[0m16:41:13.276927 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_employees (execute): 16:41:13.108642 => 16:41:13.276615
+[0m16:41:13.277488 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: ROLLBACK
+[0m16:41:13.278661 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: ROLLBACK
+[0m16:41:13.280254 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: ROLLBACK
+[0m16:41:13.284379 [debug] [Thread-3 (]: Failed to rollback 'model.jaffle_shop.raw_sales'
+[0m16:41:13.290276 [debug] [Thread-2 (]: Failed to rollback 'model.jaffle_shop.raw_employees'
+[0m16:41:13.290886 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: Close
+[0m16:41:13.292643 [debug] [Thread-4 (]: Failed to rollback 'model.jaffle_shop.raw_products'
+[0m16:41:13.293182 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: Close
+[0m16:41:13.296429 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: Close
+[0m16:41:13.298460 [debug] [Thread-3 (]: Runtime Error in model raw_sales (models/raw/minio/raw_sales.sql)
+  Catalog Error: Table with name sales does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."sales"
+                               ^
+[0m16:41:13.302926 [debug] [Thread-2 (]: Runtime Error in model raw_employees (models/raw/mysql/raw_employees.sql)
+  Catalog Error: Table with name employees does not exist!
+  Did you mean "sqlite_temp_schema"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."employees"
+                               ^
+[0m16:41:13.303934 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967ae94740>]}
+[0m16:41:13.306072 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c1ede80>]}
+[0m16:41:13.307358 [error] [Thread-3 (]: 7 of 7 ERROR creating sql table model main.raw_sales ........................... [[31mERROR[0m in 0.23s]
+[0m16:41:13.309360 [debug] [Thread-4 (]: Runtime Error in model raw_products (models/raw/mysql/raw_products.sql)
+  Catalog Error: Table with name products does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."products"
+                               ^
+[0m16:41:13.310192 [error] [Thread-2 (]: 5 of 7 ERROR creating sql table model main.raw_employees ....................... [[31mERROR[0m in 0.23s]
+[0m16:41:13.311577 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.raw_sales
+[0m16:41:13.313095 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9385dd1a-f906-4310-8091-ad1a97f86b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967ae5bfe0>]}
+[0m16:41:13.314413 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.raw_employees
+[0m16:41:13.316008 [error] [Thread-4 (]: 6 of 7 ERROR creating sql table model main.raw_products ........................ [[31mERROR[0m in 0.24s]
+[0m16:41:13.317466 [debug] [Thread-4 (]: Finished running node model.jaffle_shop.raw_products
+[0m16:41:13.320340 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:41:13.321144 [debug] [MainThread]: On master: BEGIN
+[0m16:41:13.321833 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:41:13.428777 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:41:13.430493 [debug] [MainThread]: On master: COMMIT
+[0m16:41:13.431224 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:41:13.432072 [debug] [MainThread]: On master: COMMIT
+[0m16:41:13.433170 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:41:13.439903 [debug] [MainThread]: On master: Close
+[0m16:41:13.444201 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:41:13.445266 [debug] [MainThread]: Connection 'list_my_duckdb_main' was properly closed.
+[0m16:41:13.446214 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_categories' was properly closed.
+[0m16:41:13.447007 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_employees' was properly closed.
+[0m16:41:13.447916 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_sales' was properly closed.
+[0m16:41:13.448695 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_products' was properly closed.
+[0m16:41:13.449505 [info ] [MainThread]: 
+[0m16:41:13.450244 [info ] [MainThread]: Finished running 7 table models in 0 hours 0 minutes and 4.43 seconds (4.43s).
+[0m16:41:13.452375 [debug] [MainThread]: Command end result
+[0m16:41:13.472512 [info ] [MainThread]: 
+[0m16:41:13.473257 [info ] [MainThread]: [31mCompleted with 7 errors and 0 warnings:[0m
+[0m16:41:13.473923 [info ] [MainThread]: 
+[0m16:41:13.474569 [error] [MainThread]:   Runtime Error in model raw_cities (models/raw/mysql/raw_cities.sql)
+  Catalog Error: Table with name cities does not exist!
+  Did you mean "duckdb_views"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."cities"
+                               ^
+[0m16:41:13.475212 [info ] [MainThread]: 
+[0m16:41:13.475824 [error] [MainThread]:   Runtime Error in model raw_customers (models/raw/mysql/raw_customers.sql)
+  Catalog Error: Table with name customers does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."customers"
+                               ^
+[0m16:41:13.476487 [info ] [MainThread]: 
+[0m16:41:13.477040 [error] [MainThread]:   Runtime Error in model raw_countries (models/raw/mysql/raw_countries.sql)
+  Catalog Error: Table with name countries does not exist!
+  Did you mean "duckdb_constraints"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."countries"
+                               ^
+[0m16:41:13.477710 [info ] [MainThread]: 
+[0m16:41:13.478397 [error] [MainThread]:   Runtime Error in model raw_categories (models/raw/mysql/raw_categories.sql)
+  Catalog Error: Table with name categories does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."categories"
+                               ^
+[0m16:41:13.479492 [info ] [MainThread]: 
+[0m16:41:13.480180 [error] [MainThread]:   Runtime Error in model raw_sales (models/raw/minio/raw_sales.sql)
+  Catalog Error: Table with name sales does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."sales"
+                               ^
+[0m16:41:13.481085 [info ] [MainThread]: 
+[0m16:41:13.482022 [error] [MainThread]:   Runtime Error in model raw_employees (models/raw/mysql/raw_employees.sql)
+  Catalog Error: Table with name employees does not exist!
+  Did you mean "sqlite_temp_schema"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."employees"
+                               ^
+[0m16:41:13.482700 [info ] [MainThread]: 
+[0m16:41:13.483288 [error] [MainThread]:   Runtime Error in model raw_products (models/raw/mysql/raw_products.sql)
+  Catalog Error: Table with name products does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."products"
+                               ^
+[0m16:41:13.483956 [info ] [MainThread]: 
+[0m16:41:13.484543 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=7 SKIP=0 TOTAL=7
+[0m16:41:13.485616 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 7.050941, "process_user_time": 13.177308, "process_kernel_time": 0.531266, "process_mem_max_rss": "239336", "process_in_blocks": "104", "process_out_blocks": "84536", "command_success": false}
+[0m16:41:13.486392 [debug] [MainThread]: Command `dbt run` failed at 16:41:13.486216 after 7.05 seconds
+[0m16:41:13.487083 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9680387a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c3e0c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f967c38e000>]}
+[0m16:41:13.487769 [debug] [MainThread]: Flushing usage events
+[0m16:55:19.765826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd04d768320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd04d9b8e30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd04d9e5b80>]}
+
+
+============================== 16:55:19.769596 | d69ac346-6323-4b69-9ef6-ff6a5bae3fe5 ==============================
+[0m16:55:19.769596 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:55:19.770600 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/local/airflow/dbt/jaffle_shop/logs', 'version_check': 'True', 'profiles_dir': '/usr/local/airflow/dbt/profiles', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run --project-dir /usr/local/airflow/dbt/jaffle_shop --profiles-dir /usr/local/airflow/dbt/profiles --select path:models/raw', 'send_anonymous_usage_stats': 'True'}
+[0m16:55:20.030391 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path ['sources']: [{'name': 'duckdb', 'tables': [{'name': 'sales'}]}, {'name': 'mysql', 'tables': [{'name': 'cities'}, {'name': 'customers'}, {'name': 'countries'}, {'name': 'categories'}, {'name': 'employees'}, {'name': 'products'}]}] is not of type 'object'
+
+Error encountered in /usr/local/airflow/dbt/jaffle_shop/dbt_project.yml
+[0m16:55:20.032720 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.3373187, "process_user_time": 2.836036, "process_kernel_time": 0.069902, "process_mem_max_rss": "233612", "process_in_blocks": "784", "command_success": false, "process_out_blocks": "0"}
+[0m16:55:20.033800 [debug] [MainThread]: Command `dbt run` failed at 16:55:20.033637 after 0.34 seconds
+[0m16:55:20.034601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd04d98c470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd04e3b8c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd04993f260>]}
+[0m16:55:20.035443 [debug] [MainThread]: Flushing usage events
+[0m16:57:16.408285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2c97d610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2cb5bda0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2c97ebd0>]}
+
+
+============================== 16:57:16.412292 | 71132838-60b3-41c9-a744-12d716794a1a ==============================
+[0m16:57:16.412292 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:57:16.413447 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/local/airflow/dbt/profiles', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/local/airflow/dbt/jaffle_shop/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --project-dir /usr/local/airflow/dbt/jaffle_shop --profiles-dir /usr/local/airflow/dbt/profiles --select path:models/raw', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:57:16.762310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2c97fa40>]}
+[0m16:57:16.877855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2d5ceba0>]}
+[0m16:57:16.879228 [info ] [MainThread]: Registered adapter: duckdb=1.7.2
+[0m16:57:16.892207 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m16:57:16.921964 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:57:16.922897 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m16:57:16.923770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2883eb40>]}
+[0m16:57:18.259747 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customers.sql
+[0m16:57:18.280282 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customer_ltv.sql
+[0m16:57:18.285627 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_daily_sales.sql
+[0m16:57:18.290087 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_employee_sales_summary.sql
+[0m16:57:18.294598 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_products.sql
+[0m16:57:18.299773 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_by_country.sql
+[0m16:57:18.304551 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_detailed.sql
+[0m16:57:18.309191 [debug] [MainThread]: 1603: static parser failed on mart/mart_sales_summary.sql
+[0m16:57:18.318283 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mart/mart_sales_summary.sql
+[0m16:57:18.320729 [debug] [MainThread]: 1699: static parser successfully parsed raw/minio/raw_sales.sql
+[0m16:57:18.324755 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_categories.sql
+[0m16:57:18.329220 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_cities.sql
+[0m16:57:18.334361 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_countries.sql
+[0m16:57:18.340846 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_customers.sql
+[0m16:57:18.345353 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_employees.sql
+[0m16:57:18.350457 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_products.sql
+[0m16:57:18.355315 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_categories.sql
+[0m16:57:18.360216 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_cities.sql
+[0m16:57:18.410541 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_countries.sql
+[0m16:57:18.414987 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customers.sql
+[0m16:57:18.419767 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employees.sql
+[0m16:57:18.424214 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m16:57:18.429199 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales.sql
+[0m16:57:18.520375 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_product_performance' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:57:18.523031 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_customer_lifetime_value' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:57:18.525178 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_by_region' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:57:18.527567 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_monthly_sales' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:57:18.529353 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_top_customers' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:57:18.531574 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_trends' in the 'models' section of file 'models/mart/schema.yml'
+[0m16:57:18.901322 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_product_id.3cbcd22bfe' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:57:18.902398 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_product_performance_product_id.eb590e33e2' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:57:18.903264 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_total_sales.8a14874d87' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:57:18.904167 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_total_revenue.31554647f8' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m16:57:18.905044 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_customer_id.fac63f245c' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:57:18.905880 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_customer_lifetime_value_customer_id.a216a75a35' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:57:18.906833 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_lifetime_revenue.f5f1497056' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:57:18.907931 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_average_order_value.56963bbcea' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m16:57:18.908708 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_region_id.d66dec7698' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:57:18.909494 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_sales_by_region_region_id.1f1612fa5d' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:57:18.910351 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_total_revenue.b0ca9c073d' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:57:18.911151 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_total_orders.3a38d17379' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m16:57:18.911912 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_month.88bdeb9805' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m16:57:18.912660 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_total_revenue.2e79ed72c4' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m16:57:18.913410 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_total_orders.ff48095526' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m16:57:18.914198 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_customer_id.f3ec0e0149' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:57:18.915091 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_top_customers_customer_id.573932aaf3' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:57:18.916587 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_total_revenue.90d82ec46b' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:57:18.917456 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_total_orders.658cc7eaa0' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m16:57:18.918262 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_date.5765925008' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m16:57:18.919110 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_total_revenue.b63af3cbff' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m16:57:18.919879 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_total_orders.9e64cbd99b' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m16:57:18.973052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2ca2cce0>]}
+[0m16:57:19.009071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f28820f80>]}
+[0m16:57:19.009876 [info ] [MainThread]: Found 22 models, 23 tests, 7 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m16:57:19.010618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2cedbe30>]}
+[0m16:57:19.019490 [info ] [MainThread]: 
+[0m16:57:19.020917 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:57:19.022924 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_my_duckdb'
+[0m16:57:19.037635 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb"
+[0m16:57:19.038541 [debug] [ThreadPool]: On list_my_duckdb: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_my_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"my_duckdb"'
+    
+  
+  
+[0m16:57:19.039309 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:57:19.157439 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.159474 [debug] [ThreadPool]: On list_my_duckdb: Close
+[0m16:57:19.167791 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_my_duckdb, now create_my_duckdb_main)
+[0m16:57:19.169013 [debug] [ThreadPool]: Creating schema "database: "my_duckdb"
+schema: "main"
+"
+[0m16:57:19.177470 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:57:19.178370 [debug] [ThreadPool]: On create_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_my_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='my_duckdb'
+        and type='sqlite'
+    
+  
+[0m16:57:19.178981 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:57:19.273150 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.275088 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:57:19.275709 [debug] [ThreadPool]: On create_my_duckdb_main: BEGIN
+[0m16:57:19.276552 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.277136 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:57:19.277716 [debug] [ThreadPool]: On create_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_my_duckdb_main"} */
+
+    
+    
+        create schema if not exists "my_duckdb"."main"
+    
+[0m16:57:19.278580 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.279864 [debug] [ThreadPool]: On create_my_duckdb_main: COMMIT
+[0m16:57:19.280540 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m16:57:19.281087 [debug] [ThreadPool]: On create_my_duckdb_main: COMMIT
+[0m16:57:19.282085 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.283238 [debug] [ThreadPool]: On create_my_duckdb_main: Close
+[0m16:57:19.288754 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_my_duckdb_main, now list_my_duckdb_main)
+[0m16:57:19.295465 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb_main"
+[0m16:57:19.296159 [debug] [ThreadPool]: On list_my_duckdb_main: BEGIN
+[0m16:57:19.296788 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:57:19.389416 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.390181 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb_main"
+[0m16:57:19.390767 [debug] [ThreadPool]: On list_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_my_duckdb_main"} */
+select
+      'my_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'my_duckdb'
+  
+[0m16:57:19.407923 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m16:57:19.409790 [debug] [ThreadPool]: On list_my_duckdb_main: ROLLBACK
+[0m16:57:19.411354 [debug] [ThreadPool]: Failed to rollback 'list_my_duckdb_main'
+[0m16:57:19.411874 [debug] [ThreadPool]: On list_my_duckdb_main: Close
+[0m16:57:19.415550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2894b920>]}
+[0m16:57:19.416956 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:57:19.417625 [debug] [MainThread]: On master: BEGIN
+[0m16:57:19.418130 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:57:19.517892 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:57:19.518843 [debug] [MainThread]: On master: COMMIT
+[0m16:57:19.519745 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:57:19.520704 [debug] [MainThread]: On master: COMMIT
+[0m16:57:19.522036 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:57:19.523155 [debug] [MainThread]: On master: Close
+[0m16:57:19.527162 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:57:19.527954 [info ] [MainThread]: 
+[0m16:57:19.531225 [debug] [Thread-1 (]: Began running node model.jaffle_shop.raw_categories
+[0m16:57:19.532042 [debug] [Thread-2 (]: Began running node model.jaffle_shop.raw_cities
+[0m16:57:19.533129 [debug] [Thread-3 (]: Began running node model.jaffle_shop.raw_countries
+[0m16:57:19.535163 [debug] [Thread-4 (]: Began running node model.jaffle_shop.raw_customers
+[0m16:57:19.534564 [info ] [Thread-1 (]: 1 of 7 START sql table model main.raw_categories ............................... [RUN]
+[0m16:57:19.536089 [info ] [Thread-2 (]: 2 of 7 START sql table model main.raw_cities ................................... [RUN]
+[0m16:57:19.536792 [info ] [Thread-3 (]: 3 of 7 START sql table model main.raw_countries ................................ [RUN]
+[0m16:57:19.537506 [info ] [Thread-4 (]: 4 of 7 START sql table model main.raw_customers ................................ [RUN]
+[0m16:57:19.538611 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_categories'
+[0m16:57:19.540556 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_cities'
+[0m16:57:19.541614 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_countries'
+[0m16:57:19.542615 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_customers'
+[0m16:57:19.543234 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.raw_categories
+[0m16:57:19.543850 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.raw_cities
+[0m16:57:19.544473 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.raw_countries
+[0m16:57:19.545062 [debug] [Thread-4 (]: Began compiling node model.jaffle_shop.raw_customers
+[0m16:57:19.555257 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.raw_categories"
+[0m16:57:19.558372 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.raw_cities"
+[0m16:57:19.561751 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.raw_countries"
+[0m16:57:19.565190 [debug] [Thread-4 (]: Writing injected SQL for node "model.jaffle_shop.raw_customers"
+[0m16:57:19.575546 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.raw_categories (compile): 16:57:19.545542 => 16:57:19.574910
+[0m16:57:19.576367 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_cities (compile): 16:57:19.555628 => 16:57:19.576006
+[0m16:57:19.577067 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.raw_categories
+[0m16:57:19.578054 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.raw_cities
+[0m16:57:19.578814 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_customers (compile): 16:57:19.562303 => 16:57:19.578455
+[0m16:57:19.585132 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_countries (compile): 16:57:19.558900 => 16:57:19.584648
+[0m16:57:19.616838 [debug] [Thread-4 (]: Began executing node model.jaffle_shop.raw_customers
+[0m16:57:19.632803 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.raw_countries
+[0m16:57:19.644602 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.raw_cities"
+[0m16:57:19.654853 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.raw_categories"
+[0m16:57:19.660819 [debug] [Thread-4 (]: Writing runtime sql for node "model.jaffle_shop.raw_customers"
+[0m16:57:19.667824 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.raw_countries"
+[0m16:57:19.673978 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_countries"
+[0m16:57:19.674623 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_customers"
+[0m16:57:19.675319 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: BEGIN
+[0m16:57:19.676226 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: BEGIN
+[0m16:57:19.677147 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_cities"
+[0m16:57:19.677726 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:57:19.678318 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.raw_categories"
+[0m16:57:19.679502 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:57:19.680685 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: BEGIN
+[0m16:57:19.682095 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: BEGIN
+[0m16:57:19.684154 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:57:19.685299 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:57:19.778722 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m16:57:19.779679 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_countries"
+[0m16:57:19.780642 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_countries"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_countries__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."countries"
+    );
+  
+  
+[0m16:57:19.782525 [debug] [Thread-4 (]: SQL status: OK in 0.0 seconds
+[0m16:57:19.783671 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_customers"
+[0m16:57:19.784676 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_customers"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_customers__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."customers"
+    );
+  
+  
+[0m16:57:19.786042 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m16:57:19.787011 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_cities"
+[0m16:57:19.787948 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_cities"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_cities__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."cities"
+    );
+  
+  
+[0m16:57:19.790024 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m16:57:19.791083 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.raw_categories"
+[0m16:57:19.791976 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_categories"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_categories__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."categories"
+    );
+  
+  
+[0m16:57:19.801725 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_cities (execute): 16:57:19.595280 => 16:57:19.801278
+[0m16:57:19.802696 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_customers (execute): 16:57:19.655327 => 16:57:19.802360
+[0m16:57:19.803656 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_countries (execute): 16:57:19.661267 => 16:57:19.803306
+[0m16:57:19.804541 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.raw_categories (execute): 16:57:19.579218 => 16:57:19.804173
+[0m16:57:19.805223 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: ROLLBACK
+[0m16:57:19.806349 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: ROLLBACK
+[0m16:57:19.807525 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: ROLLBACK
+[0m16:57:19.808638 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: ROLLBACK
+[0m16:57:19.828470 [debug] [Thread-3 (]: Failed to rollback 'model.jaffle_shop.raw_countries'
+[0m16:57:19.830117 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: Close
+[0m16:57:19.832139 [debug] [Thread-2 (]: Failed to rollback 'model.jaffle_shop.raw_cities'
+[0m16:57:19.834436 [debug] [Thread-4 (]: Failed to rollback 'model.jaffle_shop.raw_customers'
+[0m16:57:19.836317 [debug] [Thread-1 (]: Failed to rollback 'model.jaffle_shop.raw_categories'
+[0m16:57:19.839151 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: Close
+[0m16:57:19.841553 [debug] [Thread-3 (]: Runtime Error in model raw_countries (models/raw/mysql/raw_countries.sql)
+  Catalog Error: Table with name countries does not exist!
+  Did you mean "duckdb_constraints"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."countries"
+                               ^
+[0m16:57:19.842443 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: Close
+[0m16:57:19.843465 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: Close
+[0m16:57:19.846211 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f28944680>]}
+[0m16:57:19.848040 [debug] [Thread-2 (]: Runtime Error in model raw_cities (models/raw/mysql/raw_cities.sql)
+  Catalog Error: Table with name cities does not exist!
+  Did you mean "duckdb_views"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."cities"
+                               ^
+[0m16:57:19.853217 [debug] [Thread-4 (]: Runtime Error in model raw_customers (models/raw/mysql/raw_customers.sql)
+  Catalog Error: Table with name customers does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."customers"
+                               ^
+[0m16:57:19.854398 [error] [Thread-3 (]: 3 of 7 ERROR creating sql table model main.raw_countries ....................... [[31mERROR[0m in 0.30s]
+[0m16:57:19.857634 [debug] [Thread-1 (]: Runtime Error in model raw_categories (models/raw/mysql/raw_categories.sql)
+  Catalog Error: Table with name categories does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."categories"
+                               ^
+[0m16:57:19.858380 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2332ce90>]}
+[0m16:57:19.859386 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f23359790>]}
+[0m16:57:19.860513 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.raw_countries
+[0m16:57:19.861315 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f23448440>]}
+[0m16:57:19.862404 [error] [Thread-2 (]: 2 of 7 ERROR creating sql table model main.raw_cities .......................... [[31mERROR[0m in 0.32s]
+[0m16:57:19.863503 [error] [Thread-4 (]: 4 of 7 ERROR creating sql table model main.raw_customers ....................... [[31mERROR[0m in 0.32s]
+[0m16:57:19.864627 [debug] [Thread-3 (]: Began running node model.jaffle_shop.raw_employees
+[0m16:57:19.866709 [error] [Thread-1 (]: 1 of 7 ERROR creating sql table model main.raw_categories ...................... [[31mERROR[0m in 0.32s]
+[0m16:57:19.869544 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.raw_cities
+[0m16:57:19.870626 [debug] [Thread-4 (]: Finished running node model.jaffle_shop.raw_customers
+[0m16:57:19.871622 [info ] [Thread-3 (]: 5 of 7 START sql table model main.raw_employees ................................ [RUN]
+[0m16:57:19.872519 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.raw_categories
+[0m16:57:19.873431 [debug] [Thread-2 (]: Began running node model.jaffle_shop.raw_products
+[0m16:57:19.874436 [debug] [Thread-4 (]: Began running node model.jaffle_shop.raw_sales
+[0m16:57:19.875724 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_countries, now model.jaffle_shop.raw_employees)
+[0m16:57:19.877147 [info ] [Thread-2 (]: 6 of 7 START sql table model main.raw_products ................................. [RUN]
+[0m16:57:19.878232 [info ] [Thread-4 (]: 7 of 7 START sql table model main.raw_sales .................................... [RUN]
+[0m16:57:19.879187 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.raw_employees
+[0m16:57:19.880534 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_cities, now model.jaffle_shop.raw_products)
+[0m16:57:19.881800 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_customers, now model.jaffle_shop.raw_sales)
+[0m16:57:19.886701 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.raw_employees"
+[0m16:57:19.887774 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.raw_products
+[0m16:57:19.888670 [debug] [Thread-4 (]: Began compiling node model.jaffle_shop.raw_sales
+[0m16:57:19.894094 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.raw_products"
+[0m16:57:19.901295 [debug] [Thread-4 (]: Writing injected SQL for node "model.jaffle_shop.raw_sales"
+[0m16:57:19.903475 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_employees (compile): 16:57:19.882843 => 16:57:19.903099
+[0m16:57:19.904232 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.raw_employees
+[0m16:57:19.909443 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.raw_employees"
+[0m16:57:19.911318 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_products (compile): 16:57:19.889883 => 16:57:19.910960
+[0m16:57:19.912240 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.raw_products
+[0m16:57:19.912936 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_sales (compile): 16:57:19.894882 => 16:57:19.912646
+[0m16:57:19.918727 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.raw_products"
+[0m16:57:19.919420 [debug] [Thread-4 (]: Began executing node model.jaffle_shop.raw_sales
+[0m16:57:19.925518 [debug] [Thread-4 (]: Writing runtime sql for node "model.jaffle_shop.raw_sales"
+[0m16:57:19.927617 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_employees"
+[0m16:57:19.928452 [debug] [Thread-3 (]: On model.jaffle_shop.raw_employees: BEGIN
+[0m16:57:19.929189 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:57:19.930517 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_products"
+[0m16:57:19.931259 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_sales"
+[0m16:57:19.931838 [debug] [Thread-2 (]: On model.jaffle_shop.raw_products: BEGIN
+[0m16:57:19.933006 [debug] [Thread-4 (]: On model.jaffle_shop.raw_sales: BEGIN
+[0m16:57:19.934321 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m16:57:19.935088 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m16:57:20.027541 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m16:57:20.028701 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_employees"
+[0m16:57:20.029704 [debug] [Thread-3 (]: On model.jaffle_shop.raw_employees: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_employees"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_employees__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."employees"
+    );
+  
+  
+[0m16:57:20.031517 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m16:57:20.032738 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_products"
+[0m16:57:20.034092 [debug] [Thread-2 (]: On model.jaffle_shop.raw_products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_products"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_products__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."products"
+    );
+  
+  
+[0m16:57:20.036124 [debug] [Thread-4 (]: SQL status: OK in 0.0 seconds
+[0m16:57:20.036988 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_sales"
+[0m16:57:20.037886 [debug] [Thread-4 (]: On model.jaffle_shop.raw_sales: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_sales"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_sales__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."sales"
+    );
+  
+  
+[0m16:57:20.055610 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_products (execute): 16:57:19.913290 => 16:57:20.054943
+[0m16:57:20.056387 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_sales (execute): 16:57:19.920714 => 16:57:20.049167
+[0m16:57:20.057598 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_employees (execute): 16:57:19.904840 => 16:57:20.057243
+[0m16:57:20.058228 [debug] [Thread-2 (]: On model.jaffle_shop.raw_products: ROLLBACK
+[0m16:57:20.059124 [debug] [Thread-4 (]: On model.jaffle_shop.raw_sales: ROLLBACK
+[0m16:57:20.060177 [debug] [Thread-3 (]: On model.jaffle_shop.raw_employees: ROLLBACK
+[0m16:57:20.065809 [debug] [Thread-4 (]: Failed to rollback 'model.jaffle_shop.raw_sales'
+[0m16:57:20.068290 [debug] [Thread-2 (]: Failed to rollback 'model.jaffle_shop.raw_products'
+[0m16:57:20.070849 [debug] [Thread-4 (]: On model.jaffle_shop.raw_sales: Close
+[0m16:57:20.072588 [debug] [Thread-3 (]: Failed to rollback 'model.jaffle_shop.raw_employees'
+[0m16:57:20.073517 [debug] [Thread-2 (]: On model.jaffle_shop.raw_products: Close
+[0m16:57:20.075950 [debug] [Thread-3 (]: On model.jaffle_shop.raw_employees: Close
+[0m16:57:20.077519 [debug] [Thread-4 (]: Runtime Error in model raw_sales (models/raw/minio/raw_sales.sql)
+  Catalog Error: Table with name sales does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."sales"
+                               ^
+[0m16:57:20.082081 [debug] [Thread-2 (]: Runtime Error in model raw_products (models/raw/mysql/raw_products.sql)
+  Catalog Error: Table with name products does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."products"
+                               ^
+[0m16:57:20.083256 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f233221e0>]}
+[0m16:57:20.086465 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2335d010>]}
+[0m16:57:20.089631 [debug] [Thread-3 (]: Runtime Error in model raw_employees (models/raw/mysql/raw_employees.sql)
+  Catalog Error: Table with name employees does not exist!
+  Did you mean "sqlite_temp_schema"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."employees"
+                               ^
+[0m16:57:20.091008 [error] [Thread-4 (]: 7 of 7 ERROR creating sql table model main.raw_sales ........................... [[31mERROR[0m in 0.20s]
+[0m16:57:20.092822 [error] [Thread-2 (]: 6 of 7 ERROR creating sql table model main.raw_products ........................ [[31mERROR[0m in 0.21s]
+[0m16:57:20.094302 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '71132838-60b3-41c9-a744-12d716794a1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f23322330>]}
+[0m16:57:20.095536 [debug] [Thread-4 (]: Finished running node model.jaffle_shop.raw_sales
+[0m16:57:20.096859 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.raw_products
+[0m16:57:20.097869 [error] [Thread-3 (]: 5 of 7 ERROR creating sql table model main.raw_employees ....................... [[31mERROR[0m in 0.22s]
+[0m16:57:20.100039 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.raw_employees
+[0m16:57:20.102693 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:57:20.103507 [debug] [MainThread]: On master: BEGIN
+[0m16:57:20.104189 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:57:20.203623 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:57:20.204632 [debug] [MainThread]: On master: COMMIT
+[0m16:57:20.205436 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:57:20.206201 [debug] [MainThread]: On master: COMMIT
+[0m16:57:20.207287 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m16:57:20.208189 [debug] [MainThread]: On master: Close
+[0m16:57:20.213158 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:57:20.213926 [debug] [MainThread]: Connection 'list_my_duckdb_main' was properly closed.
+[0m16:57:20.214557 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_categories' was properly closed.
+[0m16:57:20.215190 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_products' was properly closed.
+[0m16:57:20.216192 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_employees' was properly closed.
+[0m16:57:20.217197 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_sales' was properly closed.
+[0m16:57:20.218146 [info ] [MainThread]: 
+[0m16:57:20.218926 [info ] [MainThread]: Finished running 7 table models in 0 hours 0 minutes and 1.20 seconds (1.20s).
+[0m16:57:20.221110 [debug] [MainThread]: Command end result
+[0m16:57:20.243506 [info ] [MainThread]: 
+[0m16:57:20.244325 [info ] [MainThread]: [31mCompleted with 7 errors and 0 warnings:[0m
+[0m16:57:20.245001 [info ] [MainThread]: 
+[0m16:57:20.245698 [error] [MainThread]:   Runtime Error in model raw_countries (models/raw/mysql/raw_countries.sql)
+  Catalog Error: Table with name countries does not exist!
+  Did you mean "duckdb_constraints"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."countries"
+                               ^
+[0m16:57:20.246357 [info ] [MainThread]: 
+[0m16:57:20.246959 [error] [MainThread]:   Runtime Error in model raw_cities (models/raw/mysql/raw_cities.sql)
+  Catalog Error: Table with name cities does not exist!
+  Did you mean "duckdb_views"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."cities"
+                               ^
+[0m16:57:20.247658 [info ] [MainThread]: 
+[0m16:57:20.248409 [error] [MainThread]:   Runtime Error in model raw_customers (models/raw/mysql/raw_customers.sql)
+  Catalog Error: Table with name customers does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."customers"
+                               ^
+[0m16:57:20.249368 [info ] [MainThread]: 
+[0m16:57:20.250466 [error] [MainThread]:   Runtime Error in model raw_categories (models/raw/mysql/raw_categories.sql)
+  Catalog Error: Table with name categories does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."categories"
+                               ^
+[0m16:57:20.251281 [info ] [MainThread]: 
+[0m16:57:20.251923 [error] [MainThread]:   Runtime Error in model raw_sales (models/raw/minio/raw_sales.sql)
+  Catalog Error: Table with name sales does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."sales"
+                               ^
+[0m16:57:20.252579 [info ] [MainThread]: 
+[0m16:57:20.253389 [error] [MainThread]:   Runtime Error in model raw_products (models/raw/mysql/raw_products.sql)
+  Catalog Error: Table with name products does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."products"
+                               ^
+[0m16:57:20.254188 [info ] [MainThread]: 
+[0m16:57:20.254832 [error] [MainThread]:   Runtime Error in model raw_employees (models/raw/mysql/raw_employees.sql)
+  Catalog Error: Table with name employees does not exist!
+  Did you mean "sqlite_temp_schema"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."employees"
+                               ^
+[0m16:57:20.255590 [info ] [MainThread]: 
+[0m16:57:20.256649 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=7 SKIP=0 TOTAL=7
+[0m16:57:20.258262 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 3.9249027, "process_user_time": 8.5191, "process_kernel_time": 0.354583, "process_mem_max_rss": "233608", "process_in_blocks": "352", "command_success": false, "process_out_blocks": "0"}
+[0m16:57:20.259154 [debug] [MainThread]: Command `dbt run` failed at 16:57:20.258984 after 3.93 seconds
+[0m16:57:20.259949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f2c9abb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f00a2e750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1f28b613d0>]}
+[0m16:57:20.260617 [debug] [MainThread]: Flushing usage events
+[0m16:59:48.223952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b64041d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b66b6a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b69a5b80>]}
+
+
+============================== 16:59:48.228745 | 01825257-b02e-41f4-8e4a-202f4b1c7611 ==============================
+[0m16:59:48.228745 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:59:48.229972 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/local/airflow/dbt/profiles', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/local/airflow/dbt/jaffle_shop/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --project-dir /usr/local/airflow/dbt/jaffle_shop --profiles-dir /usr/local/airflow/dbt/profiles --select path:models/raw', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:59:48.562175 [error] [MainThread]: Encountered an error:
+Runtime Error
+  at path ['sources']: [{'name': 'duckdb', 'schema': 'main', 'tables': [{'name': 'sales'}]}, {'name': 'mysql', 'schema': 'test_db', 'tables': [{'name': 'cities'}, {'name': 'customers'}, {'name': 'countries'}, {'name': 'categories'}, {'name': 'employees'}, {'name': 'products'}]}] is not of type 'object'
+
+Error encountered in /usr/local/airflow/dbt/jaffle_shop/dbt_project.yml
+[0m16:59:48.563847 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.42107755, "process_user_time": 3.208173, "process_kernel_time": 0.109256, "process_mem_max_rss": "233584", "process_in_blocks": "320", "command_success": false, "process_out_blocks": "0"}
+[0m16:59:48.565026 [debug] [MainThread]: Command `dbt run` failed at 16:59:48.564806 after 0.42 seconds
+[0m16:59:48.565930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b67c4920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b66782c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54b66e8740>]}
+[0m16:59:48.566818 [debug] [MainThread]: Flushing usage events
+[0m17:01:23.365577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dff69c440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dff69d8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dff69c560>]}
+
+
+============================== 17:01:23.369808 | 7a1cf257-4a49-40ee-9849-5e188ed8ff6a ==============================
+[0m17:01:23.369808 [info ] [MainThread]: Running with dbt=1.7.9
+[0m17:01:23.371006 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/usr/local/airflow/dbt/profiles', 'log_path': '/usr/local/airflow/dbt/jaffle_shop/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --project-dir /usr/local/airflow/dbt/jaffle_shop --profiles-dir /usr/local/airflow/dbt/profiles --select path:models/raw', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:01:23.734438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dff70bec0>]}
+[0m17:01:23.863706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dff74d760>]}
+[0m17:01:23.865024 [info ] [MainThread]: Registered adapter: duckdb=1.7.2
+[0m17:01:23.879453 [debug] [MainThread]: checksum: 6ff0d83c3b46f350064523b4e08d9241403ad71d606ba49c4e670afba3668b39, vars: {}, profile: , target: , version: 1.7.9
+[0m17:01:23.913056 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:01:23.914043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfb5476e0>]}
+[0m17:01:25.529684 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customers.sql
+[0m17:01:25.550847 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_customer_ltv.sql
+[0m17:01:25.555994 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_daily_sales.sql
+[0m17:01:25.561530 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_employee_sales_summary.sql
+[0m17:01:25.566137 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_products.sql
+[0m17:01:25.571005 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_by_country.sql
+[0m17:01:25.576826 [debug] [MainThread]: 1699: static parser successfully parsed mart/mart_sales_detailed.sql
+[0m17:01:25.581462 [debug] [MainThread]: 1603: static parser failed on mart/mart_sales_summary.sql
+[0m17:01:25.589496 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mart/mart_sales_summary.sql
+[0m17:01:25.591891 [debug] [MainThread]: 1699: static parser successfully parsed raw/minio/raw_sales.sql
+[0m17:01:25.595983 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_categories.sql
+[0m17:01:25.600256 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_cities.sql
+[0m17:01:25.604534 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_countries.sql
+[0m17:01:25.609529 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_customers.sql
+[0m17:01:25.613687 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_employees.sql
+[0m17:01:25.617736 [debug] [MainThread]: 1699: static parser successfully parsed raw/mysql/raw_products.sql
+[0m17:01:25.622153 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_categories.sql
+[0m17:01:25.626832 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_cities.sql
+[0m17:01:25.632343 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_countries.sql
+[0m17:01:25.636434 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_customers.sql
+[0m17:01:25.641551 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_employees.sql
+[0m17:01:25.647022 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_products.sql
+[0m17:01:25.653273 [debug] [MainThread]: 1699: static parser successfully parsed staging/stg_sales.sql
+[0m17:01:25.843373 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_product_performance' in the 'models' section of file 'models/mart/schema.yml'
+[0m17:01:25.846910 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_customer_lifetime_value' in the 'models' section of file 'models/mart/schema.yml'
+[0m17:01:25.849422 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_by_region' in the 'models' section of file 'models/mart/schema.yml'
+[0m17:01:25.851567 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_monthly_sales' in the 'models' section of file 'models/mart/schema.yml'
+[0m17:01:25.853220 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_top_customers' in the 'models' section of file 'models/mart/schema.yml'
+[0m17:01:25.856555 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sales_trends' in the 'models' section of file 'models/mart/schema.yml'
+[0m17:01:26.323083 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_product_id.3cbcd22bfe' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m17:01:26.324680 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_product_performance_product_id.eb590e33e2' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m17:01:26.326686 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_total_sales.8a14874d87' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m17:01:26.327711 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_product_performance_total_revenue.31554647f8' (models/mart/schema.yml) depends on a node named 'mart_product_performance' in package '' which was not found
+[0m17:01:26.328592 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_customer_id.fac63f245c' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m17:01:26.329451 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_customer_lifetime_value_customer_id.a216a75a35' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m17:01:26.330424 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_lifetime_revenue.f5f1497056' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m17:01:26.331365 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_customer_lifetime_value_average_order_value.56963bbcea' (models/mart/schema.yml) depends on a node named 'mart_customer_lifetime_value' in package '' which was not found
+[0m17:01:26.332268 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_region_id.d66dec7698' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m17:01:26.333152 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_sales_by_region_region_id.1f1612fa5d' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m17:01:26.333989 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_total_revenue.b0ca9c073d' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m17:01:26.334822 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_by_region_total_orders.3a38d17379' (models/mart/schema.yml) depends on a node named 'mart_sales_by_region' in package '' which was not found
+[0m17:01:26.335574 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_month.88bdeb9805' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m17:01:26.336403 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_total_revenue.2e79ed72c4' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m17:01:26.337223 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_monthly_sales_total_orders.ff48095526' (models/mart/schema.yml) depends on a node named 'mart_monthly_sales' in package '' which was not found
+[0m17:01:26.338368 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_customer_id.f3ec0e0149' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m17:01:26.340095 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.unique_mart_top_customers_customer_id.573932aaf3' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m17:01:26.342068 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_total_revenue.90d82ec46b' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m17:01:26.343094 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_top_customers_total_orders.658cc7eaa0' (models/mart/schema.yml) depends on a node named 'mart_top_customers' in package '' which was not found
+[0m17:01:26.343965 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_date.5765925008' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m17:01:26.344785 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_total_revenue.b63af3cbff' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m17:01:26.345591 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.jaffle_shop.not_null_mart_sales_trends_total_orders.9e64cbd99b' (models/mart/schema.yml) depends on a node named 'mart_sales_trends' in package '' which was not found
+[0m17:01:26.396651 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- sources.duckdb
+- sources.mysql
+[0m17:01:26.404330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa450d70>]}
+[0m17:01:26.447783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfb646d80>]}
+[0m17:01:26.448601 [info ] [MainThread]: Found 22 models, 23 tests, 7 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m17:01:26.449320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfc0ef2f0>]}
+[0m17:01:26.461402 [info ] [MainThread]: 
+[0m17:01:26.462933 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:01:26.465074 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_my_duckdb'
+[0m17:01:26.482354 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb"
+[0m17:01:26.483268 [debug] [ThreadPool]: On list_my_duckdb: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_my_duckdb"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"my_duckdb"'
+    
+  
+  
+[0m17:01:26.483960 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:01:26.605140 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.608868 [debug] [ThreadPool]: On list_my_duckdb: Close
+[0m17:01:26.613707 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_my_duckdb, now create_my_duckdb_main)
+[0m17:01:26.614862 [debug] [ThreadPool]: Creating schema "database: "my_duckdb"
+schema: "main"
+"
+[0m17:01:26.626060 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m17:01:26.627093 [debug] [ThreadPool]: On create_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_my_duckdb_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='my_duckdb'
+        and type='sqlite'
+    
+  
+[0m17:01:26.627795 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:01:26.736146 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.738552 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m17:01:26.740021 [debug] [ThreadPool]: On create_my_duckdb_main: BEGIN
+[0m17:01:26.742565 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.743329 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m17:01:26.743859 [debug] [ThreadPool]: On create_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_my_duckdb_main"} */
+
+    
+    
+        create schema if not exists "my_duckdb"."main"
+    
+[0m17:01:26.744869 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.746162 [debug] [ThreadPool]: On create_my_duckdb_main: COMMIT
+[0m17:01:26.746699 [debug] [ThreadPool]: Using duckdb connection "create_my_duckdb_main"
+[0m17:01:26.747231 [debug] [ThreadPool]: On create_my_duckdb_main: COMMIT
+[0m17:01:26.748171 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.748800 [debug] [ThreadPool]: On create_my_duckdb_main: Close
+[0m17:01:26.754048 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_my_duckdb_main, now list_my_duckdb_main)
+[0m17:01:26.764099 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb_main"
+[0m17:01:26.764784 [debug] [ThreadPool]: On list_my_duckdb_main: BEGIN
+[0m17:01:26.765302 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:01:26.891664 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.893271 [debug] [ThreadPool]: Using duckdb connection "list_my_duckdb_main"
+[0m17:01:26.895567 [debug] [ThreadPool]: On list_my_duckdb_main: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_my_duckdb_main"} */
+select
+      'my_duckdb' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'my_duckdb'
+  
+[0m17:01:26.922715 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m17:01:26.925169 [debug] [ThreadPool]: On list_my_duckdb_main: ROLLBACK
+[0m17:01:26.927024 [debug] [ThreadPool]: Failed to rollback 'list_my_duckdb_main'
+[0m17:01:26.927759 [debug] [ThreadPool]: On list_my_duckdb_main: Close
+[0m17:01:26.932057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfb644830>]}
+[0m17:01:26.933110 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:26.933830 [debug] [MainThread]: On master: BEGIN
+[0m17:01:26.934452 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:01:27.050624 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m17:01:27.051509 [debug] [MainThread]: On master: COMMIT
+[0m17:01:27.052294 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:27.053094 [debug] [MainThread]: On master: COMMIT
+[0m17:01:27.054220 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m17:01:27.055267 [debug] [MainThread]: On master: Close
+[0m17:01:27.060084 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:01:27.060872 [info ] [MainThread]: 
+[0m17:01:27.064523 [debug] [Thread-1 (]: Began running node model.jaffle_shop.raw_categories
+[0m17:01:27.065231 [debug] [Thread-2 (]: Began running node model.jaffle_shop.raw_cities
+[0m17:01:27.065826 [debug] [Thread-3 (]: Began running node model.jaffle_shop.raw_countries
+[0m17:01:27.066919 [debug] [Thread-4 (]: Began running node model.jaffle_shop.raw_customers
+[0m17:01:27.066453 [info ] [Thread-1 (]: 1 of 7 START sql table model main.raw_categories ............................... [RUN]
+[0m17:01:27.067680 [info ] [Thread-2 (]: 2 of 7 START sql table model main.raw_cities ................................... [RUN]
+[0m17:01:27.068595 [info ] [Thread-3 (]: 3 of 7 START sql table model main.raw_countries ................................ [RUN]
+[0m17:01:27.069276 [info ] [Thread-4 (]: 4 of 7 START sql table model main.raw_customers ................................ [RUN]
+[0m17:01:27.070455 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_categories'
+[0m17:01:27.074221 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_cities'
+[0m17:01:27.075510 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_countries'
+[0m17:01:27.076592 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.jaffle_shop.raw_customers'
+[0m17:01:27.077274 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.raw_categories
+[0m17:01:27.077901 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.raw_cities
+[0m17:01:27.078523 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.raw_countries
+[0m17:01:27.079127 [debug] [Thread-4 (]: Began compiling node model.jaffle_shop.raw_customers
+[0m17:01:27.094037 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.raw_cities"
+[0m17:01:27.095761 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.raw_categories"
+[0m17:01:27.099327 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.raw_countries"
+[0m17:01:27.102900 [debug] [Thread-4 (]: Writing injected SQL for node "model.jaffle_shop.raw_customers"
+[0m17:01:27.110309 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.raw_categories (compile): 17:01:27.079589 => 17:01:27.109874
+[0m17:01:27.111155 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.raw_categories
+[0m17:01:27.111997 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_cities (compile): 17:01:27.090640 => 17:01:27.111621
+[0m17:01:27.117885 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_customers (compile): 17:01:27.099997 => 17:01:27.117556
+[0m17:01:27.129313 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.raw_cities
+[0m17:01:27.135685 [debug] [Thread-4 (]: Began executing node model.jaffle_shop.raw_customers
+[0m17:01:27.143324 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_countries (compile): 17:01:27.096349 => 17:01:27.142914
+[0m17:01:27.170965 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.raw_countries
+[0m17:01:27.194389 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.raw_cities"
+[0m17:01:27.206288 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.raw_categories"
+[0m17:01:27.207065 [debug] [Thread-4 (]: Writing runtime sql for node "model.jaffle_shop.raw_customers"
+[0m17:01:27.209712 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.raw_countries"
+[0m17:01:27.211600 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_cities"
+[0m17:01:27.212653 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: BEGIN
+[0m17:01:27.213731 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:01:27.214521 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.raw_categories"
+[0m17:01:27.215837 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: BEGIN
+[0m17:01:27.216604 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_customers"
+[0m17:01:27.217184 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:01:27.217840 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_countries"
+[0m17:01:27.218376 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: BEGIN
+[0m17:01:27.219402 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: BEGIN
+[0m17:01:27.220588 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:01:27.221700 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:01:27.314806 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.315768 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_cities"
+[0m17:01:27.316693 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_cities"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_cities__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."cities"
+    );
+  
+  
+[0m17:01:27.318040 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.318905 [debug] [Thread-1 (]: Using duckdb connection "model.jaffle_shop.raw_categories"
+[0m17:01:27.319768 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_categories"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_categories__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."categories"
+    );
+  
+  
+[0m17:01:27.321575 [debug] [Thread-4 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.323183 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_customers"
+[0m17:01:27.323985 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_customers"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_customers__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."customers"
+    );
+  
+  
+[0m17:01:27.325874 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.327017 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_countries"
+[0m17:01:27.328054 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_countries"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_countries__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."countries"
+    );
+  
+  
+[0m17:01:27.335596 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.raw_categories (execute): 17:01:27.112339 => 17:01:27.335176
+[0m17:01:27.336666 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_countries (execute): 17:01:27.177100 => 17:01:27.336315
+[0m17:01:27.337495 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_customers (execute): 17:01:27.159826 => 17:01:27.337170
+[0m17:01:27.338837 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_cities (execute): 17:01:27.149197 => 17:01:27.338207
+[0m17:01:27.339779 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: ROLLBACK
+[0m17:01:27.340922 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: ROLLBACK
+[0m17:01:27.341789 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: ROLLBACK
+[0m17:01:27.342612 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: ROLLBACK
+[0m17:01:27.356416 [debug] [Thread-2 (]: Failed to rollback 'model.jaffle_shop.raw_cities'
+[0m17:01:27.358581 [debug] [Thread-4 (]: Failed to rollback 'model.jaffle_shop.raw_customers'
+[0m17:01:27.360651 [debug] [Thread-3 (]: Failed to rollback 'model.jaffle_shop.raw_countries'
+[0m17:01:27.361571 [debug] [Thread-2 (]: On model.jaffle_shop.raw_cities: Close
+[0m17:01:27.363420 [debug] [Thread-1 (]: Failed to rollback 'model.jaffle_shop.raw_categories'
+[0m17:01:27.363988 [debug] [Thread-4 (]: On model.jaffle_shop.raw_customers: Close
+[0m17:01:27.364830 [debug] [Thread-3 (]: On model.jaffle_shop.raw_countries: Close
+[0m17:01:27.367271 [debug] [Thread-1 (]: On model.jaffle_shop.raw_categories: Close
+[0m17:01:27.368984 [debug] [Thread-2 (]: Runtime Error in model raw_cities (models/raw/mysql/raw_cities.sql)
+  Catalog Error: Table with name cities does not exist!
+  Did you mean "duckdb_views"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."cities"
+                               ^
+[0m17:01:27.372605 [debug] [Thread-4 (]: Runtime Error in model raw_customers (models/raw/mysql/raw_customers.sql)
+  Catalog Error: Table with name customers does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."customers"
+                               ^
+[0m17:01:27.376127 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa330110>]}
+[0m17:01:27.377824 [debug] [Thread-3 (]: Runtime Error in model raw_countries (models/raw/mysql/raw_countries.sql)
+  Catalog Error: Table with name countries does not exist!
+  Did you mean "duckdb_constraints"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."countries"
+                               ^
+[0m17:01:27.380126 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa45bbc0>]}
+[0m17:01:27.381996 [debug] [Thread-1 (]: Runtime Error in model raw_categories (models/raw/mysql/raw_categories.sql)
+  Catalog Error: Table with name categories does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."categories"
+                               ^
+[0m17:01:27.383071 [error] [Thread-2 (]: 2 of 7 ERROR creating sql table model main.raw_cities .......................... [[31mERROR[0m in 0.30s]
+[0m17:01:27.384186 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa330140>]}
+[0m17:01:27.385210 [error] [Thread-4 (]: 4 of 7 ERROR creating sql table model main.raw_customers ....................... [[31mERROR[0m in 0.30s]
+[0m17:01:27.385947 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa610350>]}
+[0m17:01:27.386994 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.raw_cities
+[0m17:01:27.388182 [error] [Thread-3 (]: 3 of 7 ERROR creating sql table model main.raw_countries ....................... [[31mERROR[0m in 0.31s]
+[0m17:01:27.389768 [debug] [Thread-4 (]: Finished running node model.jaffle_shop.raw_customers
+[0m17:01:27.391083 [error] [Thread-1 (]: 1 of 7 ERROR creating sql table model main.raw_categories ...................... [[31mERROR[0m in 0.32s]
+[0m17:01:27.391997 [debug] [Thread-2 (]: Began running node model.jaffle_shop.raw_employees
+[0m17:01:27.393691 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.raw_countries
+[0m17:01:27.394560 [debug] [Thread-4 (]: Began running node model.jaffle_shop.raw_products
+[0m17:01:27.395558 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.raw_categories
+[0m17:01:27.396405 [info ] [Thread-2 (]: 5 of 7 START sql table model main.raw_employees ................................ [RUN]
+[0m17:01:27.397320 [debug] [Thread-3 (]: Began running node model.jaffle_shop.raw_sales
+[0m17:01:27.398157 [info ] [Thread-4 (]: 6 of 7 START sql table model main.raw_products ................................. [RUN]
+[0m17:01:27.399666 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_cities, now model.jaffle_shop.raw_employees)
+[0m17:01:27.400603 [info ] [Thread-3 (]: 7 of 7 START sql table model main.raw_sales .................................... [RUN]
+[0m17:01:27.401806 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_customers, now model.jaffle_shop.raw_products)
+[0m17:01:27.402653 [debug] [Thread-2 (]: Began compiling node model.jaffle_shop.raw_employees
+[0m17:01:27.403992 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.raw_countries, now model.jaffle_shop.raw_sales)
+[0m17:01:27.405200 [debug] [Thread-4 (]: Began compiling node model.jaffle_shop.raw_products
+[0m17:01:27.409971 [debug] [Thread-2 (]: Writing injected SQL for node "model.jaffle_shop.raw_employees"
+[0m17:01:27.411037 [debug] [Thread-3 (]: Began compiling node model.jaffle_shop.raw_sales
+[0m17:01:27.414670 [debug] [Thread-4 (]: Writing injected SQL for node "model.jaffle_shop.raw_products"
+[0m17:01:27.418958 [debug] [Thread-3 (]: Writing injected SQL for node "model.jaffle_shop.raw_sales"
+[0m17:01:27.425426 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_employees (compile): 17:01:27.406026 => 17:01:27.425001
+[0m17:01:27.426284 [debug] [Thread-2 (]: Began executing node model.jaffle_shop.raw_employees
+[0m17:01:27.427011 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_products (compile): 17:01:27.411770 => 17:01:27.426656
+[0m17:01:27.434030 [debug] [Thread-2 (]: Writing runtime sql for node "model.jaffle_shop.raw_employees"
+[0m17:01:27.434832 [debug] [Thread-4 (]: Began executing node model.jaffle_shop.raw_products
+[0m17:01:27.442359 [debug] [Thread-4 (]: Writing runtime sql for node "model.jaffle_shop.raw_products"
+[0m17:01:27.443243 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_sales (compile): 17:01:27.415840 => 17:01:27.442892
+[0m17:01:27.444187 [debug] [Thread-3 (]: Began executing node model.jaffle_shop.raw_sales
+[0m17:01:27.450068 [debug] [Thread-3 (]: Writing runtime sql for node "model.jaffle_shop.raw_sales"
+[0m17:01:27.452128 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_products"
+[0m17:01:27.452842 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_employees"
+[0m17:01:27.453439 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: BEGIN
+[0m17:01:27.454442 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: BEGIN
+[0m17:01:27.455561 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:01:27.456464 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:01:27.459709 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_sales"
+[0m17:01:27.460401 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: BEGIN
+[0m17:01:27.460978 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:01:27.551977 [debug] [Thread-4 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.553095 [debug] [Thread-4 (]: Using duckdb connection "model.jaffle_shop.raw_products"
+[0m17:01:27.554113 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_products"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_products__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."products"
+    );
+  
+  
+[0m17:01:27.556847 [debug] [Thread-2 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.557880 [debug] [Thread-2 (]: Using duckdb connection "model.jaffle_shop.raw_employees"
+[0m17:01:27.558775 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_employees"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_employees__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."employees"
+    );
+  
+  
+[0m17:01:27.560206 [debug] [Thread-3 (]: SQL status: OK in 0.0 seconds
+[0m17:01:27.561180 [debug] [Thread-3 (]: Using duckdb connection "model.jaffle_shop.raw_sales"
+[0m17:01:27.561966 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: /* {"app": "dbt", "dbt_version": "1.7.9", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.raw_sales"} */
+
+  
+    
+    
+
+    create  table
+      "my_duckdb"."main"."raw_sales__dbt_tmp"
+  
+    as (
+      select * from "my_duckdb"."main"."sales"
+    );
+  
+  
+[0m17:01:27.570097 [debug] [Thread-2 (]: Timing info for model.jaffle_shop.raw_employees (execute): 17:01:27.427449 => 17:01:27.569758
+[0m17:01:27.570917 [debug] [Thread-3 (]: Timing info for model.jaffle_shop.raw_sales (execute): 17:01:27.444696 => 17:01:27.570638
+[0m17:01:27.571903 [debug] [Thread-4 (]: Timing info for model.jaffle_shop.raw_products (execute): 17:01:27.436258 => 17:01:27.571432
+[0m17:01:27.572696 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: ROLLBACK
+[0m17:01:27.573729 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: ROLLBACK
+[0m17:01:27.574641 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: ROLLBACK
+[0m17:01:27.579671 [debug] [Thread-2 (]: Failed to rollback 'model.jaffle_shop.raw_employees'
+[0m17:01:27.581295 [debug] [Thread-3 (]: Failed to rollback 'model.jaffle_shop.raw_sales'
+[0m17:01:27.584761 [debug] [Thread-4 (]: Failed to rollback 'model.jaffle_shop.raw_products'
+[0m17:01:27.585302 [debug] [Thread-2 (]: On model.jaffle_shop.raw_employees: Close
+[0m17:01:27.586237 [debug] [Thread-3 (]: On model.jaffle_shop.raw_sales: Close
+[0m17:01:27.587148 [debug] [Thread-4 (]: On model.jaffle_shop.raw_products: Close
+[0m17:01:27.592483 [debug] [Thread-3 (]: Runtime Error in model raw_sales (models/raw/minio/raw_sales.sql)
+  Catalog Error: Table with name sales does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."sales"
+                               ^
+[0m17:01:27.595113 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1df1d1d880>]}
+[0m17:01:27.598060 [debug] [Thread-4 (]: Runtime Error in model raw_products (models/raw/mysql/raw_products.sql)
+  Catalog Error: Table with name products does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."products"
+                               ^
+[0m17:01:27.600529 [error] [Thread-3 (]: 7 of 7 ERROR creating sql table model main.raw_sales ........................... [[31mERROR[0m in 0.19s]
+[0m17:01:27.602406 [debug] [Thread-2 (]: Runtime Error in model raw_employees (models/raw/mysql/raw_employees.sql)
+  Catalog Error: Table with name employees does not exist!
+  Did you mean "sqlite_temp_schema"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."employees"
+                               ^
+[0m17:01:27.602978 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa36e630>]}
+[0m17:01:27.604152 [debug] [Thread-3 (]: Finished running node model.jaffle_shop.raw_sales
+[0m17:01:27.605295 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7a1cf257-4a49-40ee-9849-5e188ed8ff6a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfa36ea20>]}
+[0m17:01:27.606654 [error] [Thread-4 (]: 6 of 7 ERROR creating sql table model main.raw_products ........................ [[31mERROR[0m in 0.20s]
+[0m17:01:27.608046 [error] [Thread-2 (]: 5 of 7 ERROR creating sql table model main.raw_employees ....................... [[31mERROR[0m in 0.21s]
+[0m17:01:27.609123 [debug] [Thread-4 (]: Finished running node model.jaffle_shop.raw_products
+[0m17:01:27.610203 [debug] [Thread-2 (]: Finished running node model.jaffle_shop.raw_employees
+[0m17:01:27.613699 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:27.614533 [debug] [MainThread]: On master: BEGIN
+[0m17:01:27.615251 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:01:27.712717 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m17:01:27.713508 [debug] [MainThread]: On master: COMMIT
+[0m17:01:27.714112 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:01:27.714694 [debug] [MainThread]: On master: COMMIT
+[0m17:01:27.715522 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m17:01:27.716086 [debug] [MainThread]: On master: Close
+[0m17:01:27.720024 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:01:27.720662 [debug] [MainThread]: Connection 'list_my_duckdb_main' was properly closed.
+[0m17:01:27.721166 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_categories' was properly closed.
+[0m17:01:27.721918 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_employees' was properly closed.
+[0m17:01:27.722711 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_sales' was properly closed.
+[0m17:01:27.723375 [debug] [MainThread]: Connection 'model.jaffle_shop.raw_products' was properly closed.
+[0m17:01:27.724151 [info ] [MainThread]: 
+[0m17:01:27.725010 [info ] [MainThread]: Finished running 7 table models in 0 hours 0 minutes and 1.26 seconds (1.26s).
+[0m17:01:27.727130 [debug] [MainThread]: Command end result
+[0m17:01:27.746444 [info ] [MainThread]: 
+[0m17:01:27.747175 [info ] [MainThread]: [31mCompleted with 7 errors and 0 warnings:[0m
+[0m17:01:27.747760 [info ] [MainThread]: 
+[0m17:01:27.748498 [error] [MainThread]:   Runtime Error in model raw_cities (models/raw/mysql/raw_cities.sql)
+  Catalog Error: Table with name cities does not exist!
+  Did you mean "duckdb_views"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."cities"
+                               ^
+[0m17:01:27.749140 [info ] [MainThread]: 
+[0m17:01:27.749693 [error] [MainThread]:   Runtime Error in model raw_customers (models/raw/mysql/raw_customers.sql)
+  Catalog Error: Table with name customers does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."customers"
+                               ^
+[0m17:01:27.750499 [info ] [MainThread]: 
+[0m17:01:27.751067 [error] [MainThread]:   Runtime Error in model raw_countries (models/raw/mysql/raw_countries.sql)
+  Catalog Error: Table with name countries does not exist!
+  Did you mean "duckdb_constraints"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."countries"
+                               ^
+[0m17:01:27.751636 [info ] [MainThread]: 
+[0m17:01:27.752149 [error] [MainThread]:   Runtime Error in model raw_categories (models/raw/mysql/raw_categories.sql)
+  Catalog Error: Table with name categories does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."categories"
+                               ^
+[0m17:01:27.752696 [info ] [MainThread]: 
+[0m17:01:27.753203 [error] [MainThread]:   Runtime Error in model raw_sales (models/raw/minio/raw_sales.sql)
+  Catalog Error: Table with name sales does not exist!
+  Did you mean "sqlite_master"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."sales"
+                               ^
+[0m17:01:27.753759 [info ] [MainThread]: 
+[0m17:01:27.754318 [error] [MainThread]:   Runtime Error in model raw_products (models/raw/mysql/raw_products.sql)
+  Catalog Error: Table with name products does not exist!
+  Did you mean "duckdb_types"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."products"
+                               ^
+[0m17:01:27.755121 [info ] [MainThread]: 
+[0m17:01:27.756190 [error] [MainThread]:   Runtime Error in model raw_employees (models/raw/mysql/raw_employees.sql)
+  Catalog Error: Table with name employees does not exist!
+  Did you mean "sqlite_temp_schema"?
+  
+  LINE 11:       select * from "my_duckdb"."main"."employees"
+                               ^
+[0m17:01:27.757454 [info ] [MainThread]: 
+[0m17:01:27.758345 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=7 SKIP=0 TOTAL=7
+[0m17:01:27.759839 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 4.468705, "process_user_time": 9.376977, "process_kernel_time": 0.463747, "process_mem_max_rss": "233596", "process_in_blocks": "176", "command_success": false, "process_out_blocks": "0"}
+[0m17:01:27.760769 [debug] [MainThread]: Command `dbt run` failed at 17:01:27.760607 after 4.47 seconds
+[0m17:01:27.761530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dff6cbdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfb7ae6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1dfc0ef2f0>]}
+[0m17:01:27.762305 [debug] [MainThread]: Flushing usage events

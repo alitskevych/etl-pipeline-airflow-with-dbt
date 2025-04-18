@@ -1,0 +1,16 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /usr/local/airflow/dbt/jaffle_shop/my_duckdb.db
+      schema: main
+      threads: 4
+      extensions:
+        - httpfs
+      settings:
+        s3_region: 'us-east-1'
+        s3_access_key_id: 'minioadmin'
+        s3_secret_access_key: 'minioadmin'
+        s3_endpoint: 'http://127.0.0.1:9000'
+        s3_url_style: 'path'

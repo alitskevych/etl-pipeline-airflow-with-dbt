@@ -1,0 +1,14 @@
+services:
+  webserver:
+    volumes:
+      - ./dbt:/usr/local/airflow/dbt:rw
+    environment:
+      - AIRFLOW__WEBSERVER__BASE_URL=http://localhost:8080
+
+  scheduler:
+    volumes:
+      - ./dbt:/usr/local/airflow/dbt:rw
+
+  triggerer:
+    volumes:
+      - ./dbt:/usr/local/airflow/dbt:rw

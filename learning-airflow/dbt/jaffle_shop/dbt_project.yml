@@ -1,0 +1,55 @@
+name: 'jaffle_shop'
+
+config-version: 2
+version: '0.1'
+
+profile: 'jaffle_shop'
+
+# Define paths for project components
+model-paths:
+  - "models"
+seed-paths:
+  - "seeds"
+test-paths:
+  - "tests"
+analysis-paths:
+  - "analysis"
+macro-paths:
+  - "macros"
+
+# Define target and clean directories
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+  - "logs"
+
+# Specify dbt version compatibility
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+
+# Corrected sources section
+sources:
+  duckdb:
+    schema: main
+    tables:
+      - name: sales
+  mysql:
+    schema: test_db
+    tables:
+      - name: cities
+      - name: customers
+      - name: countries
+      - name: categories
+      - name: employees
+      - name: products
+
+# Configure models
+models:
+  jaffle_shop:
+    materialized: table
+    staging:
+      materialized: view
+    mart:
+      materialized: incremental
+      +unique_key: customer_id
+      +incremental_strategy: merge

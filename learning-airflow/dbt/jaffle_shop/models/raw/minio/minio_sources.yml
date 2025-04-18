@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: minio
+    schema: main
+    tables:
+      - name: sales
+        external:
+          location: "s3://my-dbt-source/sales.csv"
+          format: "csv"

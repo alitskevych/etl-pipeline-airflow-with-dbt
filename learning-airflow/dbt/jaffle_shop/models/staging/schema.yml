@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Staged data for customers.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+      - name: middle_initial
+      - name: last_name
+      - name: city_id
+      - name: address
+
+  - name: stg_employees
+    description: Staged data for employees.
+    columns:
+      - name: employee_id
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+      - name: middle_initial
+      - name: last_name
+      - name: birth_date
+      - name: gender
+      - name: city_id
+      - name: hire_date
+
+  - name: stg_products
+    description: Staged data for products.
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+      - name: price
+      - name: category_id
+      - name: class
+      - name: modify_date
+      - name: resistant
+      - name: is_allergic
+      - name: vitality_days
+
+  - name: stg_categories
+    description: Staged data for product categories.
+    columns:
+      - name: category_id
+        tests:
+          - not_null
+          - unique
+      - name: category_name
+
+  - name: stg_countries
+    description: Staged data for countries.
+    columns:
+      - name: country_id
+        tests:
+          - not_null
+          - unique
+      - name: country_name
+      - name: country_code
+
+  - name: stg_cities
+    description: Staged data for cities.
+    columns:
+      - name: city_id
+        tests:
+          - not_null
+          - unique
+      - name: city_name
+      - name: zipcode
+      - name: country_id
+
+  - name: stg_sales
+    description: Staged data for sales.
+    columns:
+      - name: sales_id
+        tests:
+          - not_null
+          - unique
+      - name: sales_person_id
+      - name: customer_id
+      - name: product_id
+      - name: quantity
+      - name: discount
+      - name: total_price
+      - name: sales_date
+      - name: transaction_number

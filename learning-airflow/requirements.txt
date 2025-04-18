@@ -1,0 +1,6 @@
+pandas
+duckdb
+pymysql
+polars
+astronomer-cosmos[dbt-core,dbt-mysql,dbt-duckdb]
+astro-run-dag
